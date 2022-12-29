@@ -2,7 +2,7 @@
 
 package com.example
 
-class Docker implements serializable {
+class Docker implements Serializable {
 
     def script
 
