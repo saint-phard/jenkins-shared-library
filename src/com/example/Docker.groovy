@@ -37,7 +37,7 @@ class Docker implements Serializable {
             script.sh 'git branch'
             script.sh 'git config --list'
 
-            script.sh "git remote set-url origin https://$script.username:$script.password@https://github.com/saint-phard/maven-docker-jenkins.git"
+            script.sh "git remote set-url origin https://$script.username:$script.password@github.com/saint-phard/maven-docker-jenkins.git"
             script.sh 'git add .'
             script.sh 'git commit -m "jenkins-build: app version increment"'
             script.sh 'git push origin HEAD:jenkins-shared-library'
