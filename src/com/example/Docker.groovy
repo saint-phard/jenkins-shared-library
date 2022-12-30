@@ -30,8 +30,8 @@ class Docker implements Serializable {
     def githubCommit() {
         script.echo 'commiting all changes to github to reflect new version changes'
         script.withCredentials([script.usernamePassword(credentialsId: 'my-github-credentials', usernameVariable: 'username', passwordVariable: 'password')]) {
-            script.sh 'git config ---global user.name "jenkins-user"'
-            script.sh 'git config ---global user.email "jenkins-user@local.com"'
+            script.sh 'git config --global user.name "jenkins-user"'
+            script.sh 'git config --global user.email "jenkins-user@local.com"'
 
             script.sh 'git status'
             script.sh 'git branch'
